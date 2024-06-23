@@ -12,6 +12,7 @@ app.on('ready', () => {
             nodeIntegration: true,
             preload: path.join(__dirname, 'preload.js'),
             contextIsolation: true, // 确保启用 contextIsolation
+            devTools: false
         }
     });
     mainWindow.loadFile('./src/main.html');
