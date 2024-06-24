@@ -1,0 +1,144 @@
+body {
+    background-image: url("../img/bullet_chute.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    position: fixed;
+    top: 0;
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    -webkit-app-region: drag;
+}
+
+
+.title > #minimize, #close {
+    height: 6vh;
+    width: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-app-region: no-drag;
+}
+
+.bi-dash, .bi-x {
+    width: 15vh;
+    height: 15vh;
+    color: aliceblue;
+}
+
+.title > #minimize:hover, #close:hover {
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+* {
+    -webkit-user-select: none; /* Chrome、Safari、Opera */
+    user-select: none;
+}
+
+.bullet_chute {
+    top: 50%;
+    transform: translateY(-52.5%) translateX(-0.5%);
+    position: absolute;
+    width: 117.7vh;
+    height: 35vh;
+    display: grid;
+    grid-template-columns: repeat(8, 8.8%);
+    grid-gap: 4.25%;
+}
+
+#bullet_number {
+    margin: 0;
+    position: absolute;
+    top: 5.7vh;
+    left: 40vh;
+    font-size: 6.5vh;
+    font-weight: bold;
+    color: rgba(253, 219, 181, 0.75);
+}
+
+.ban_bullet {
+    transform: translateY(+12%) translateX(1.5%);
+    height: 30vh;
+    background-image: url("../img/ban_bullet.png");
+    background-size: contain;
+}
+
+#true {
+    color: rgba(31, 31, 31, 0.86);
+    position: absolute;
+    bottom: 6%;
+    font-size: 10vh;
+    left: 22%;
+}
+
+#false {
+    color: rgba(31, 31, 31, 0.86);
+    position: absolute;
+    bottom: 6%;
+    font-size: 10vh;
+    right: 32%;
+}
+
+div#fj {
+    position: absolute;
+    bottom: 5vh;
+    right: 40vh;
+    font-size: 6vh;
+    color: rgb(255 255 255 / 64%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div#tj {
+    position: absolute;
+    bottom: 5vh;
+    left: 57vh;
+    font-size: 6vh;
+    color: rgb(255 255 255 / 64%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plus {
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5vh;
+}
+
+.minus {
+    transform: scaleY(.7) translateY(-0.5vh);
+    font-size: 10vh;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+}
+.bullet{
+    transition-property: all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #c10000;
+    font-weight: bolder;
+}
+.bullet p {
+    padding-top: 40%;
+}
+.bullet:not(.ban_bullet)[data-value="null"] {
+    background: url(../img/unknown_bullet.png);
+}
+.bullet:not(.ban_bullet)[data-value="true"] {
+    background: url(../img/red_bullet.png);
+}
+.bullet:not(.ban_bullet)[data-value="false"] {
+    background: url(../img/green_bullet.png);
+}
