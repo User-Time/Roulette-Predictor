@@ -1,0 +1,108 @@
+.title {
+    position: fixed;
+    top: 0;
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    -webkit-app-region: drag;
+    /*padding-right: 1vh;*/
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: fill;
+    object-position: center;
+    z-index: -1;
+}
+
+body {
+    height: 450px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title > #minimize, #close {
+    height: 6vh;
+    width: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-app-region: no-drag;
+}
+.bi-dash, .bi-x{
+    width: 15vh;
+    height: 15vh;
+    color: aliceblue;
+}
+.title > #minimize:hover, #close:hover{
+    background-color: rgba(255, 255, 255, 0.07);
+}
+* {
+    -webkit-user-select: none; /* Chrome、Safari、Opera */
+    user-select: none;
+}
+form {
+    color: rgba(255, 255, 255, 0.65);
+    margin-top: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form > label {
+    letter-spacing: 0.5vh;
+    font-size: 5vh;
+    margin-bottom: 1vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+form > label >div{
+    width: 5vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+form > label >div>p{
+    margin: 0;
+}
+form > p{
+    font-size: 4vh;
+    /*margin: 0px;*/
+    margin-top: 1.5vh;
+    letter-spacing: 0.5vh;
+}
+form > p:hover{
+    color: rgba(255, 255, 255, 0.35);
+}
+input {
+    padding: 0 2vh;
+    color: white;
+    border-color: rgba(255, 255, 255, 0.00);
+    width: 15vh;
+    height: 8vh;
+    font-size: 5vh;
+    background: rgb(54, 54, 54);
+    text-align: center;
+    text-align-last: center;
+    border-radius: 1.5vh;
+    background: rgba(255, 255, 255, 0);
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+option{
+    background: rgba(255, 255, 255, 0.00);
+    color: black;
+    width: 1vh;
+}
+input:focus-visible {
+    outline: 0;
+}
