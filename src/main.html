@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="./css/default.css" rel="stylesheet" type="text/css">
+    <title></title>
+</head>
+<body>
+<video autoplay disablepictureinpicture loop muted="" preload>
+    <source src="./bg.mp4">
+</video>
+<div class="title">
+    <div id="minimize">
+        <svg class="bi-dash" fill="currentColor" viewBox="0 0 16 16"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+        </svg>
+    </div>
+    <div id="close">
+        <svg class="bi-x" fill="currentColor" viewBox="0 0 16 16"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+        </svg>
+    </div>
+</div>
+<form action="#">
+    <label>Number</label>
+    <label>
+        <div></div>
+        <input id="quantity" type="number" value="2" min="2" max="8">
+        <div>
+            <div onclick="increase()">+</div>
+            <div onclick="decrease()">-</div>
+        </div>
+    </label>
+    <p id="start">Start</p>
+</form>
+</body>
+<script>
+    function increase() {
+        let input = document.getElementById('quantity');
+        if(parseInt(input.value) < 8){
+            if (parseInt(input.value) < 2){
+                input.value = 2;
+            }
+            else {
+                input.value = parseInt(input.value) + 1;
+            }
+
+        }
+      }
+
+    function decrease() {
+        let input = document.getElementById('quantity');
+        if(parseInt(input.value) > 2){
+            if (parseInt(input.value) > 8){
+                input.value = 8;
+            }
+            else {
+                input.value = parseInt(input.value) - 1;
+            }
+        }
+      }
+
+</script>
+</html>
