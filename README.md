@@ -17,3 +17,6 @@ npm start
 ```bash
 npm install
 ```
+## 🖥️界面预览
+![](./img1.png)
+![](./img2.png)
