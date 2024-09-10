@@ -1,5 +1,5 @@
 {
-  "name": "Roulette Predictor",
+  "name": "Roulette-Predictor",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,13 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^30.0.1",
+    "electron-builder": "^25.0.5",
     "nodemon": "^3.1.0"
+  },
+  "build": {
+    "appId": "com.example.roulette",
+    "win": {
+      "target": "nsis"
+    }
   }
 }
