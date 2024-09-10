@@ -8,6 +8,13 @@ Roulette Predictor 是一款专门为《Buckshot Roulette》游戏设计的概�
 ![Node.js version](https://img.shields.io/badge/node-%3E%3D%2016.17.0-brightgreen)
 - Node.js: 版本 >= 16.17.0
 
+
+## 🛠 安装
+
+```bash
+npm install
+```
+
 ## 🚀 快速开始
 
 安装完成后，可以使用以下命令启动程序：
@@ -16,11 +23,6 @@ Roulette Predictor 是一款专门为《Buckshot Roulette》游戏设计的概�
 npm start
 ```
 
-## 🛠 安装
-
-```bash
-npm install
-```
 
 ## 🖥️界面预览
 ![](./img1.png)
